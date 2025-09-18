@@ -3,164 +3,108 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Shield, Zap, BarChart3 } from 'lucide-react';
+import { ArrowRight, Shield, Brain, Zap } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
+    <section className="relative py-24 lg:py-40 overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
 
-      <div className="container mx-auto px-4 relative">
-        <div className="mx-auto max-w-4xl text-center">
+      <div className="container mx-auto px-6 relative">
+        <div className="mx-auto max-w-5xl text-center">
 
           {/* Main headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl lg:text-6xl font-bold tracking-tight mb-6"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight"
           >
-            Your AI Finally Meets{' '}
+            Your AI Finally Knows
             <br />
-            <span className="text-primary">Your Business Data</span>
+            <span className="text-primary">Your Business</span>
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Clean subheading */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-2xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed"
           >
-            We give you a private LLM that knows your company inside out. Ask questions across Salesforce, GitHub, Zendesk, and every system that matters - all through your secure AI assistant.
+            We build your secure MCP server with DeepSeek AI that understands every corner of your business.
+            <br />
+            <span className="text-lg mt-2 block">Connect all your systems. Ask intelligent questions. Get real insights.</span>
           </motion.p>
 
-          {/* Value proposition bullets */}
+          {/* What you get - simplified */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 text-sm font-medium"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto"
           >
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>Complete AI solution included</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>Your data, our AI</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>Enterprise-grade security</span>
-            </div>
-          </motion.div>
-
-          {/* MCP Server Feature Highlight */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.27 }}
-            className="mb-8"
-          >
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-6 border border-primary/20">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                <Shield className="w-8 h-8 text-primary flex-shrink-0" />
-                <div className="text-center md:text-left">
-                  <h3 className="text-lg font-bold text-foreground mb-1">
-                    Secure MCP Server + Flexible AI Connections
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    We create your secure MCP server with DeepSeek running on our cloud by default. Want to use ChatGPT or Claude? Connect with specific permissions as needed.
-                  </p>
-                </div>
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-card border border-border/50">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
+              <h3 className="text-xl font-semibold mb-2">Secure MCP Server</h3>
+              <p className="text-muted-foreground text-center">We build and manage your dedicated server</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-card border border-border/50">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
+                <Brain className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">DeepSeek AI Included</h3>
+              <p className="text-muted-foreground text-center">Private LLM running on our cloud for you</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-card border border-border/50">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
+                <Zap className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">24 Hour Setup</h3>
+              <p className="text-muted-foreground text-center">Complete solution deployed in one day</p>
             </div>
           </motion.div>
 
-          {/* Visual diagram */}
+          {/* CTA buttons - cleaner */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mb-12"
-          >
-            <div className="flex items-center justify-center space-x-8 py-8">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center space-y-2"
-              >
-                <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center">
-                  <BarChart3 className="w-8 h-8 text-secondary-foreground" />
-                </div>
-                <span className="text-sm font-medium">Company Systems</span>
-              </motion.div>
-
-              <motion.div
-                animate={{ x: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <ArrowRight className="w-6 h-6 text-primary" />
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center space-y-2"
-              >
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <span className="text-sm font-medium">AI Agent</span>
-              </motion.div>
-
-              <motion.div
-                animate={{ x: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-              >
-                <ArrowRight className="w-6 h-6 text-primary" />
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center space-y-2"
-              >
-                <div className="w-16 h-16 bg-accent rounded-lg flex items-center justify-center relative">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
-                  </svg>
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
-                </div>
-                <span className="text-sm font-medium">AI Models</span>
-                <span className="text-xs text-green-600 font-medium">DeepSeek • ChatGPT • Claude</span>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* CTA buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-4">
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-xl px-12 py-6 rounded-xl">
                 <Link href="/demo">
-                  Get Your Complete AI Solution
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Start Building My AI Solution
+                  <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4" asChild>
-                <Link href="#pricing">
-                  <Play className="mr-2 h-4 w-4" />
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <Button variant="outline" size="lg" className="text-xl px-12 py-6 rounded-xl" asChild>
+                <Link href="#how-it-works">
                   See How It Works
                 </Link>
               </Button>
             </motion.div>
+          </motion.div>
+
+          {/* Simple proof point */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-16 text-center"
+          >
+            <p className="text-sm text-muted-foreground">
+              Trusted by 150+ companies • 98% success rate • 24-hour setup
+            </p>
           </motion.div>
         </div>
       </div>
