@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Brain, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -31,44 +31,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed"
+            className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             We build your secure MCP server with DeepSeek AI that understands every corner of your business.
             <br />
             <span className="text-lg mt-2 block">Connect all your systems. Ask intelligent questions. Get real insights.</span>
           </motion.p>
 
-          {/* What you get - simplified */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto"
-          >
-            <div className="flex flex-col items-center p-6 rounded-2xl bg-card border border-border/50">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Secure MCP Server</h3>
-              <p className="text-muted-foreground text-center">We build and manage your dedicated server</p>
-            </div>
-
-            <div className="flex flex-col items-center p-6 rounded-2xl bg-card border border-border/50">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">DeepSeek AI Included</h3>
-              <p className="text-muted-foreground text-center">Private LLM running on our cloud for you</p>
-            </div>
-
-            <div className="flex flex-col items-center p-6 rounded-2xl bg-card border border-border/50">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
-                <Zap className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">24 Hour Setup</h3>
-              <p className="text-muted-foreground text-center">Complete solution deployed in one day</p>
-            </div>
-          </motion.div>
 
           {/* CTA buttons - cleaner */}
           <motion.div
