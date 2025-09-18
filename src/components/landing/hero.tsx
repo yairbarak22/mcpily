@@ -33,9 +33,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            We build your secure MCP server with DeepSeek AI that understands every corner of your business.
+            Finally, an AI that actually knows your business inside out. We deploy your private DeepSeek AI with instant access to every system, every customer, every insight.
             <br />
-            <span className="text-lg mt-2 block">Connect all your systems. Ask intelligent questions. Get real insights.</span>
+            <span className="text-lg mt-2 block">Stop asking AI generic questions. Start getting business breakthroughs.</span>
           </motion.p>
 
 
