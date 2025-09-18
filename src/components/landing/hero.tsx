@@ -33,7 +33,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            Finally, an AI that actually knows your business inside out. We deploy your private DeepSeek AI with instant access to every system, every customer, every insight.
+            Finally, an AI that actually knows your business inside out. We deploy your private AI with instant access to every system, every customer, every insight.
             <br />
             <span className="text-lg mt-2 block">Stop asking AI generic questions. Start getting business breakthroughs.</span>
           </motion.p>
