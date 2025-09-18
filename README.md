@@ -112,9 +112,26 @@ npx tsc --noEmit     # Type checking
 ## 🚢 Deployment
 
 ### Vercel (Recommended)
-1. Push code to GitHub repository
-2. Connect repository to Vercel
-3. Deploy automatically with zero configuration
+1. **Connect Repository**: Link your GitHub repo to Vercel
+2. **Import Project**: Import at https://vercel.com/new
+3. **Auto Deploy**: Vercel detects Next.js and deploys automatically
+
+### Custom Domain Setup (mcpily.com)
+1. **In Vercel Dashboard:**
+   - Go to Project Settings → Domains
+   - Add `mcpily.com` and `www.mcpily.com`
+
+2. **DNS Configuration:**
+   - Add CNAME: `www` → `your-project.vercel.app`
+   - Add A record: `@` → `76.76.19.61`
+
+### Troubleshooting 404 Issues
+If you get 404 errors:
+
+1. **Check Build Status**: Verify deployment succeeded in Vercel dashboard
+2. **Force Redeploy**: Go to Deployments → "..." → Redeploy
+3. **Test Vercel URL**: Try `your-project.vercel.app` before custom domain
+4. **DNS Propagation**: Wait up to 24 hours for DNS changes
 
 ### Manual Build
 ```bash
