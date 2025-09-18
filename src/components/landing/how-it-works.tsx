@@ -78,29 +78,31 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Timeline indicator */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-20"
+          className="text-center mt-16"
         >
-          <div className="bg-primary/10 border border-primary/20 rounded-3xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready in 24 Hours
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Complete AI solution deployed and ready to use
-            </p>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-              <a
-                href="/demo"
-                className="inline-block px-10 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors"
-              >
-                Start My Setup
-              </a>
-            </motion.div>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-16 bg-gradient-to-b from-primary/50 to-primary/20"></div>
+
+            {/* Timeline end point */}
+            <div className="relative flex flex-col items-center">
+              <div className="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg"></div>
+              <div className="mt-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl px-8 py-6 max-w-md">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-lg font-semibold text-foreground">Complete in 24 Hours</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  From setup to your first business insights
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
