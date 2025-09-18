@@ -130,7 +130,7 @@ export function IntegrationsShowcase() {
               32+ Integrations and Growing
             </h3>
             <p className="text-muted-foreground mb-6">
-              Don't see your tool? We can build custom integrations for any system with an API.
+              Don&apos;t see your tool? We can build custom integrations for any system with an API.
             </p>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <a
